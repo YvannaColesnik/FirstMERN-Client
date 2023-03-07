@@ -9,7 +9,7 @@ function App() {
   const [friends, setFriends] = useState([]);
 
   const addFriend = () => {
-    axios.post('http://localhost:3000/addFriend',
+    axios.post('https://my-first-mern.herokuapp.com/addFriend',
       {
         name: name, age: age
       })
@@ -21,7 +21,7 @@ function App() {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:3000/read')
+    axios.get('https://my-first-mern.herokuapp.com/read')
       .then((response) => {
         setFriends(response.data)
       }).catch(() => {
